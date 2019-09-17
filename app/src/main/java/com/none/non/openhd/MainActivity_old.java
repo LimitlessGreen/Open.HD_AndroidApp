@@ -34,7 +34,7 @@ import android.widget.Toast;
 import org.w3c.dom.Text;
 
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener,
+public class MainActivity_old extends AppCompatActivity implements View.OnClickListener,
         AdapterView.OnItemSelectedListener {
 
         final Handler handler = new Handler();
