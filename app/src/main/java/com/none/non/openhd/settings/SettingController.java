@@ -54,8 +54,8 @@ public class SettingController implements
         //insertFakeSettings();
         settingManager.initialize();
 
-        mainActivity.setSupportActionBar((Toolbar)mainActivity.findViewById(R.id.notes_toolbar));
-        mainActivity.setTitle("OpenHD Settings");
+        //mainActivity.setSupportActionBar((Toolbar)mainActivity.findViewById(R.id.notes_toolbar));
+        //mainActivity.setTitle(R.string.app_name);
     }
 
     private void insertFakeSettings(){
