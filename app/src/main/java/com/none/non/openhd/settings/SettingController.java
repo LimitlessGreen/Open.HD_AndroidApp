@@ -29,6 +29,7 @@ public class SettingController implements
         FloatingActionButton.OnClickListener {
 
     private SettingManager settingManager;
+    private MainActivity mainActivity;
 
     @Inject
     SettingController(SettingManager settingManager) {
@@ -43,13 +44,14 @@ public class SettingController implements
 
 
     public void onCreate(MainActivity mainActivity) {
+        this.mainActivity = mainActivity;
 
-        mainActivity.setContentView(R.layout.activity_settings_list);
+        this.mainActivity.setContentView(R.layout.activity_settings_list);
         mRecyclerView = mainActivity.findViewById(R.id.recyclerView);
 
-        mainActivity.findViewById(R.id.fab).setOnClickListener(this);
+        this.mainActivity.findViewById(R.id.fab).setOnClickListener(this);
 
-        initRecyclerView(mainActivity);
+        initRecyclerView();
 
         //insertFakeSettings();
         settingManager.initialize();
@@ -67,8 +69,8 @@ public class SettingController implements
         mSettingRecyclerAdapter.notifyDataSetChanged();
     }
 
-    private void initRecyclerView(MainActivity mainActivity){
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(mainActivity);
+    private void initRecyclerView(){
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this.mainActivity);
         mRecyclerView.setLayoutManager(linearLayoutManager);
         VerticalSpacingItemDecorator itemDecorator = new VerticalSpacingItemDecorator(10);
         mRecyclerView.addItemDecoration(itemDecorator);
