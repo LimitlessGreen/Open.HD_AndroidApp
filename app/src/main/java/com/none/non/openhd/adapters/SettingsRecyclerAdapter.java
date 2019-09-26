@@ -1,13 +1,13 @@
 package com.none.non.openhd.adapters;
 
-
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.none.non.openhd.R;
 import com.none.non.openhd.settings.SettingModel;

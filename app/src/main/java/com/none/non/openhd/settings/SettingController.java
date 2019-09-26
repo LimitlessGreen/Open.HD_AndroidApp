@@ -1,11 +1,14 @@
 package com.none.non.openhd.settings;
 
-import android.support.design.widget.FloatingActionButton;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
+import android.app.AlertDialog;
+
 import android.view.View;
 
+import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.none.non.openhd.MainActivity;
 import com.none.non.openhd.R;
 import com.none.non.openhd.adapters.SettingsRecyclerAdapter;

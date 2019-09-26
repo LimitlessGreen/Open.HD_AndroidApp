@@ -1,7 +1,7 @@
 package com.none.non.openhd;
-
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.none.non.openhd.settings.DaggerSettingControllerComponent;
 import com.none.non.openhd.settings.SettingController;
@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity
         /* Dependency Injection stuff */
         SettingControllerComponent component = DaggerSettingControllerComponent.create();
         component.inject(this);
+
         settingController.onCreate(this);
     }
 
