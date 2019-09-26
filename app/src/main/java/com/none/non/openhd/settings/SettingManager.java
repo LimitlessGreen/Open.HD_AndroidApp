@@ -38,6 +38,10 @@ public class SettingManager {
         return settingRepository.get(settingName);
     }
 
+    public SettingModel getSetting(int index) {
+        return settingRepository.get(index);
+    }
+
     public ArrayList<SettingModel> getAllSettings() {
         return settingRepository.get();
     }

@@ -47,6 +47,10 @@ class SettingRepository {
         return null;
     }
 
+    SettingModel get(int index) {
+        return this.settings.get(index);
+    }
+
     /**
      * replace an old setting by an new one
      */
